@@ -2,10 +2,16 @@ import styled from "styled-components";
 import { Card } from "./Card";
 
 export const StyledVideos = styled.div`
+  height: 38rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  overflow: hidden;
+
   & ${Card} {
     padding: 1rem 0;
     padding-top: 0.5rem;
     border-top: 9px solid #333;
+    margin: 3px 0;
   }
 
   & ${Card}:hover {
@@ -49,6 +55,7 @@ export const VideosMain = styled.div`
   display: grid;
   grid-template-columns: 75% 25%;
   margin: 0 1rem;
+  margin-right: 0;
 
   & > :first-child {
     border-right: 1px solid ${({ theme }) => theme.borderColor};
@@ -57,7 +64,7 @@ export const VideosMain = styled.div`
 
   & iframe {
     width: 100%;
-    height: 25rem;
+    height: 23rem;
   }
 
   & p {
@@ -68,9 +75,42 @@ export const VideosMain = styled.div`
     color: ${({ theme }) => theme.hoverColor};
   }
 
+  & p#description {
+    font-size: 1rem;
+    color: #333;
+    font-family: "Slabo 27px", serif;
+  }
+
   & h3 {
     font-weight: 700;
     margin: 0;
     font-size: 1.2rem;
+  }
+
+  & > :nth-child(2) {
+    height: 32rem;
+    margin: 0 0.6rem;
+    border-right: 1px solid ${({ theme }) => theme.borderColor};
+    overflow: scroll;
+  }
+
+  & :nth-child(2) > div {
+    display: flex;
+    flex-direction: column;
+    height: 11rem;
+    margin: 0 0.5rem;
+    margin-bottom: 0.7rem;
+    margin-right: 1.3rem;
+    border-bottom: 1px solid ${({ theme }) => theme.borderColor};
+  }
+
+  & > :nth-child(2) iframe {
+    width: 13rem;
+    height: 6rem;
+  }
+
+  & :nth-child(2) h4 {
+    font-size: 0.9rem;
+    font-weight: 400;
   }
 `;
