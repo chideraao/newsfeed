@@ -6,12 +6,12 @@ const GlobalStyle = createGlobalStyle`
 	padding: 0;
 	margin: 0;
 	scroll-behavior: smooth;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 * body {
 	font-family: "Roboto", sans-serif;
-	color: #333;
+	color: #18191a;
 	line-height: 1.6;
 	font-size: 16px;
 }

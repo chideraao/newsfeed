@@ -6,7 +6,7 @@ export const StyledHeader = styled.header`
 
   & > :first-child {
     width: 100%;
-    border-bottom: 0.7px solid ${({ theme }) => theme.borderColor};
+    border-bottom: 1px solid ${({ theme }) => theme.borderColor};
     text-align: center;
   }
 
@@ -34,7 +34,7 @@ export const StyledNav = styled.nav`
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: 500;
-    border-right: 0.7px solid ${({ theme }) => theme.borderColor};
+    border-right: 1px solid ${({ theme }) => theme.borderColor};
     font-family: "Syne Mono", monospace;
   }
 

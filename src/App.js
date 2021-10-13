@@ -6,7 +6,8 @@ import GlobalStyle from "./styles/Global";
 
 function App() {
   const theme = {
-    borderColor: "#B3B3B3",
+    borderColor: "#BFBFBF",
+    hoverColor: "#636262",
     hoverColors: [
       "rgb(157, 213, 216)",
       "#0FB197",
