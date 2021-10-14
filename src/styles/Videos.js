@@ -3,7 +3,7 @@ import { Card } from "./Card";
 
 export const StyledVideos = styled.div`
   height: 38rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   padding-bottom: 1.5rem;
   overflow: hidden;
 
@@ -102,6 +102,10 @@ export const VideosMain = styled.div`
     margin-bottom: 0.7rem;
     margin-right: 1.3rem;
     border-bottom: 1px solid ${({ theme }) => theme.borderColor};
+  }
+
+  & div :hover {
+    color: ${({ theme }) => theme.hoverColor};
   }
 
   & > :nth-child(2) iframe {

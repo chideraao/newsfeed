@@ -19,12 +19,12 @@ function Home() {
   useEffect(() => {
     axios
       .all([
-        // axios.get(
-        //   `${api.base}access_key=${api.key}&categories=technology&languages=en&countries=us,gb,de,au,ca,fr&limit=100`
-        // ),
-        // axios.get(
-        //   `${api.base}access_key=${api.key}&categories=general&languages=en&countries=us,gb,de,au,ca,fr&limit=100`
-        // ),
+        axios.get(
+          `${api.base}access_key=${api.key}&categories=technology&languages=en&countries=us,gb,de,au,ca,fr&limit=100`
+        ),
+        axios.get(
+          `${api.base}access_key=${api.key}&categories=general&languages=en&countries=us,gb,de,au,ca,fr&limit=100`
+        ),
         // axios.get(
         //   `${api.base}access_key=${api.key}&categories=business&languages=en&countries=us,gb,de,au,ca,fr&limit=100`
         // ),
@@ -39,8 +39,8 @@ function Home() {
         // ),
       ])
       .then((res) => {
-        // setTechnology(res[0].data.data);
-        // setGeneral(res[1].data.data);
+        setTechnology(res[0].data.data);
+        setGeneral(res[1].data.data);
         // setBusiness(res[2].data.data);
         // setEntertainment(res[3].data.data);
         // setHealth(res[4].data.data);
@@ -52,7 +52,11 @@ function Home() {
   }, []);
 
   return (
-    <>
+    <div
+    // style={{
+    //   overflow: "hidden",
+    // }}
+    >
       <Header />
       <Main
         general={general}
@@ -62,7 +66,7 @@ function Home() {
         health={health}
         sports={sports}
       />
-    </>
+    </div>
   );
 }
 

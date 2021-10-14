@@ -4,13 +4,12 @@ import { Card } from "./Card";
 export const StyledMain = styled.main`
   background-color: #e4e6eb;
   padding-top: 0.5rem;
-  margin-bottom: 4rem;
 `;
 
-export const StyledDiv1 = styled.div`
+export const StyledDiv2 = styled.div`
   display: grid;
   gap: 0.3rem;
-  grid-template-columns: 68% 32%;
+  grid-template-columns: 32% 68%;
 `;
 
 export const ImageDiv = styled.div`
@@ -27,25 +26,22 @@ export const ArticleHeading = styled.div`
   margin: 0.5rem;
 `;
 
-export const Div1Main = styled.div`
+export const Div2Main = styled.div`
   & > :first-child {
     display: flex;
   }
 
   & > :first-child > :first-child {
-    width: 65%;
+    width: 35%;
   }
 
   & > :first-child > :nth-child(2) {
-    width: 35%;
+    width: 65%;
+    margin-left: 0;
   }
 
   & > :nth-child(2) {
     display: flex;
-  }
-
-  & > :nth-child(2) > :first-child > :first-child a {
-    flex-direction: row-reverse;
   }
 
   & > :nth-child(2) > :first-child {
@@ -58,7 +54,7 @@ export const Div1Main = styled.div`
 
   & ${Card} {
     margin: 0.4rem;
-    margin-left: 0.1rem;
+    margin-top: 0.2rem;
     padding-bottom: 0.5rem;
   }
 
@@ -80,11 +76,15 @@ export const Div1Main = styled.div`
     height: 100%;
   }
 
-  & > :nth-child(2) > :nth-child(2) a ${ImageDiv} {
+  & > :nth-child(2) > :nth-child(2) > :first-child a {
+    flex-direction: row-reverse;
+  }
+
+  & > :nth-child(2) > :first-child a ${ImageDiv} {
     display: none;
   }
 
-  & > :nth-child(2) > :nth-child(2) a ${ArticleHeading} {
+  & > :nth-child(2) > :first-child a ${ArticleHeading} {
     & h3 {
       font-weight: 300;
       font-size: 2.2rem;
@@ -193,6 +193,7 @@ export const StyledAside = styled.aside`
     border-top: 9px solid #333;
     padding: 1rem 0;
     padding-bottom: 0.5rem;
+    margin-left: 0;
   }
 `;
 

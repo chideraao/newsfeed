@@ -4,11 +4,11 @@ import {
   ArticleHeading,
   AsideFooter,
   AsideMain,
-  Div1Main,
+  Div2Main,
   ImageDiv,
   StyledAside,
-  StyledDiv1,
-} from "../styles/Main";
+  StyledDiv2,
+} from "../styles/Div2";
 import { ReactComponent as More } from "../assets/east_black_24dp.svg";
 
 function shuffle(array) {
@@ -31,7 +31,7 @@ function shuffle(array) {
   return array;
 }
 
-function Div1({ general, technology }) {
+function Div2({ general, technology }) {
   var newGeneral = [];
   var popularContent = [...general, ...technology];
   var popularMain = [];
@@ -54,8 +54,46 @@ function Div1({ general, technology }) {
   popularMain.length = 7;
 
   return (
-    <StyledDiv1>
-      <Div1Main>
+    <StyledDiv2>
+      <StyledAside>
+        <Card>
+          <div>
+            <h2>Most Recent</h2>
+          </div>
+          <AsideMain>
+            {popularMain.map((article) => {
+              return (
+                <div>
+                  <a href={article.url}>
+                    <ImageDiv>
+                      <img
+                        src={article.image}
+                        alt={`Thumbnail of ${article.title}`}
+                      />
+                    </ImageDiv>
+                    <div>
+                      <p>{article.category}</p>
+                      <h3>
+                        {article.title.length > 55
+                          ? `${article.title.slice(0, 55)}...`
+                          : article.title}{" "}
+                      </h3>
+                      <p>{article.author || article.source}</p>
+                    </div>
+                  </a>
+                </div>
+              );
+            })}
+          </AsideMain>
+          <AsideFooter>
+            <div role="button">
+              <More />
+            </div>
+            <h4>Read More</h4>
+          </AsideFooter>
+        </Card>
+      </StyledAside>
+      <Div2Main>
         {newGeneral[5]?.title ? (
           <>
             <div>
@@ -69,7 +107,11 @@ function Div1({ general, technology }) {
                   </ImageDiv>
                   <ArticleHeading>
                     <p>{newGeneral[0].category}</p>
-                    <h3>{newGeneral[0].title} </h3>
+                    <h3>
+                      {newGeneral[0].title.length > 75
+                        ? `${newGeneral[0].title.slice(0, 75)}...`
+                        : newGeneral[0].title}
+                    </h3>
                     <p>{newGeneral[0].author || newGeneral[0].source} </p>
                   </ArticleHeading>
                 </a>
@@ -84,17 +126,28 @@ function Div1({ general, technology }) {
                   </ImageDiv>
                   <ArticleHeading>
                     <p>{newGeneral[1].category}</p>
-                    <h3>
-                      {newGeneral[1].title.length > 75
-                        ? `${newGeneral[1].title.slice(0, 75)}...`
-                        : newGeneral[1].title}
-                    </h3>
+                    <h3>{newGeneral[1].title} </h3>
                     <p>{newGeneral[1].author || newGeneral[1].source} </p>
                   </ArticleHeading>
                 </a>
               </Card>
             </div>
             <div>
+              <Card>
+                <a href={newGeneral[4].url}>
+                  <ImageDiv>
+                    <img
+                      src={newGeneral[4].image}
+                      alt={`Thumbnail of ${newGeneral[4].title}`}
+                    />
+                  </ImageDiv>
+                  <ArticleHeading>
+                    <p>{newGeneral[4].category}</p>
+                    <h3>{newGeneral[4].title} </h3>
+                    <p>{newGeneral[4].author || newGeneral[4].source} </p>
+                  </ArticleHeading>
+                </a>
+              </Card>
               <div>
                 <Card>
                   <a href={newGeneral[2].url}>
@@ -135,22 +188,6 @@ function Div1({ general, technology }) {
                   </a>
                 </Card>
               </div>
-
-              <Card>
-                <a href={newGeneral[4].url}>
-                  <ImageDiv>
-                    <img
-                      src={newGeneral[4].image}
-                      alt={`Thumbnail of ${newGeneral[4].title}`}
-                    />
-                  </ImageDiv>
-                  <ArticleHeading>
-                    <p>{newGeneral[4].category}</p>
-                    <h3>{newGeneral[4].title} </h3>
-                    <p>{newGeneral[4].author || newGeneral[4].source} </p>
-                  </ArticleHeading>
-                </a>
-              </Card>
             </div>
             <div>
               <Card>
@@ -178,47 +215,9 @@ function Div1({ general, technology }) {
         ) : (
           ""
         )}
-      </Div1Main>
-      <StyledAside>
-        <Card>
-          <div>
-            <h2>Most Popular</h2>
-          </div>
-          <AsideMain>
-            {popularMain.map((article) => {
-              return (
-                <div>
-                  <a href={article.url}>
-                    <ImageDiv>
-                      <img
-                        src={article.image}
-                        alt={`Thumbnail of ${article.title}`}
-                      />
-                    </ImageDiv>
-                    <div>
-                      <p>{article.category}</p>
-                      <h3>
-                        {article.title.length > 55
-                          ? `${article.title.slice(0, 55)}...`
-                          : article.title}{" "}
-                      </h3>
-                      <p>{article.author || article.source}</p>
-                    </div>
-                  </a>
-                </div>
-              );
-            })}
-          </AsideMain>
-          <AsideFooter>
-            <div role="button">
-              <More />
-            </div>
-            <h4>More Stories</h4>
-          </AsideFooter>
-        </Card>
-      </StyledAside>
-    </StyledDiv1>
+      </Div2Main>
+    </StyledDiv2>
   );
 }
 
-export default Div1;
+export default Div2;
