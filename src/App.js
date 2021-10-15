@@ -29,7 +29,7 @@ function App() {
       <GlobalStyle />
       <Router>
         <Switch>
-          <Route component={Home} path="/" exact />
+          <Route component={Home} path="/home" exact />
           <Route component={NotFound} path="/not-found" exact />
           <Redirect to="not-found" />
         </Switch>
