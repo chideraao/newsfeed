@@ -9,17 +9,17 @@ function Header() {
         <h1>NEWSFEED</h1>
       </Link>
       <StyledNav>
-        <Link to="">General</Link>
+        <Link to="/general">General</Link>
 
-        <Link to="">Business</Link>
+        <Link to="/business">Business</Link>
 
-        <Link to="">Entertainment</Link>
+        <Link to="/entertainment">Entertainment</Link>
 
-        <Link to="">Health</Link>
+        <Link to="/science">Science</Link>
 
-        <Link to="">Technology</Link>
+        <Link to="/technology">Technology</Link>
 
-        <Link to="">Sports</Link>
+        <Link to="/sports">Sports</Link>
       </StyledNav>
     </StyledHeader>
   );

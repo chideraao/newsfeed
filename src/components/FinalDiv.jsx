@@ -34,7 +34,7 @@ function FinalDiv({ general, technology }) {
       />
       <CategoryDiv
         data={general}
-        heading="Health"
+        heading="Science"
         limit={4}
         margin={true}
         fill={newTechnology[1]}

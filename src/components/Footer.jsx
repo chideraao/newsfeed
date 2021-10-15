@@ -11,7 +11,10 @@ function Footer() {
       <div className="signout flex-column">
         <span>
           {" "}
-          Made with &#9829; by <a href="https://dhera.dev/">Okeke Chidera</a>
+          Made with &#9829; by{" "}
+          <a href="https://dhera.dev/" target="_blank" rel="noreferrer">
+            Chidera Okeke
+          </a>
         </span>
       </div>
     </StyledFooter>

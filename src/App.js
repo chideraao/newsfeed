@@ -1,8 +1,14 @@
 import { ThemeProvider } from "styled-components";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 import Home from "./Pages/Home";
 import "./styles/App.css";
 import GlobalStyle from "./styles/Global";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   const theme = {
@@ -22,9 +28,11 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Router>
-        <div className="App">
+        <Switch>
           <Route component={Home} path="/" exact />
-        </div>
+          <Route component={NotFound} path="/not-found" exact />
+          <Redirect to="not-found" />
+        </Switch>
       </Router>
     </ThemeProvider>
   );

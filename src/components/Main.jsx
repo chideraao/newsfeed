@@ -17,7 +17,7 @@ function Main({
   technology,
   business,
   sports,
-  health,
+  science,
   entertainment,
 }) {
   var newTechnology = [];
@@ -36,7 +36,7 @@ function Main({
         <Div2 general={general} technology={technology} />
         <StyledFullDiv>
           <Card>
-            <a href={newTechnology[3].url}>
+            <a href={newTechnology[3].url} target="_blank" rel="noreferrer">
               <ImageDiv>
                 <img
                   src={newTechnology[3].image}

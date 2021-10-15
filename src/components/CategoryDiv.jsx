@@ -49,7 +49,7 @@ function CategoryDiv({ data, heading, limit, margin, fill, fillTwo }) {
     <StyledAside>
       {fill ? (
         <Card className="fill">
-          <a href={fill.url}>
+          <a href={fill.url} target="_blank" rel="noreferrer">
             <ImageDiv>
               <img src={fill.image} alt={`Thumbnail of ${fill.title}`} />
             </ImageDiv>
@@ -71,7 +71,7 @@ function CategoryDiv({ data, heading, limit, margin, fill, fillTwo }) {
           {popularMain.map((article) => {
             return (
               <div>
-                <a href={article.url}>
+                <a href={article.url} target="_blank" rel="noreferrer">
                   <ImageDiv>
                     <img
                       src={article.image}
@@ -101,7 +101,7 @@ function CategoryDiv({ data, heading, limit, margin, fill, fillTwo }) {
       </Card>
       {fillTwo ? (
         <Card className="fill fillTwo">
-          <a href={fillTwo.url}>
+          <a href={fillTwo.url} target="_blank" rel="noreferrer">
             <ImageDiv>
               <img src={fillTwo.image} alt={`Thumbnail of ${fillTwo.title}`} />
             </ImageDiv>

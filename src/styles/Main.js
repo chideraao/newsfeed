@@ -4,7 +4,7 @@ import { Card } from "./Card";
 export const StyledMain = styled.main`
   background-color: #e4e6eb;
   padding-top: 0.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   height: 100%;
 `;
 

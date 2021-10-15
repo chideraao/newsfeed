@@ -60,7 +60,7 @@ function Div1({ general, technology }) {
           <>
             <div>
               <Card>
-                <a href={newGeneral[0].url}>
+                <a href={newGeneral[0].url} target="_blank" rel="noreferrer">
                   <ImageDiv>
                     <img
                       src={newGeneral[0].image}
@@ -75,7 +75,7 @@ function Div1({ general, technology }) {
                 </a>
               </Card>
               <Card>
-                <a href={newGeneral[1].url}>
+                <a href={newGeneral[1].url} target="_blank" rel="noreferrer">
                   <ImageDiv>
                     <img
                       src={newGeneral[1].image}
@@ -97,7 +97,7 @@ function Div1({ general, technology }) {
             <div>
               <div>
                 <Card>
-                  <a href={newGeneral[2].url}>
+                  <a href={newGeneral[2].url} target="_blank" rel="noreferrer">
                     <ImageDiv>
                       <img
                         src={newGeneral[2].image}
@@ -116,7 +116,7 @@ function Div1({ general, technology }) {
                   </a>
                 </Card>
                 <Card>
-                  <a href={newGeneral[3].url}>
+                  <a href={newGeneral[3].url} target="_blank" rel="noreferrer">
                     <ImageDiv>
                       <img
                         src={newGeneral[3].image}
@@ -137,7 +137,7 @@ function Div1({ general, technology }) {
               </div>
 
               <Card>
-                <a href={newGeneral[4].url}>
+                <a href={newGeneral[4].url} target="_blank" rel="noreferrer">
                   <ImageDiv>
                     <img
                       src={newGeneral[4].image}
@@ -154,7 +154,7 @@ function Div1({ general, technology }) {
             </div>
             <div>
               <Card>
-                <a href={newGeneral[5].url}>
+                <a href={newGeneral[5].url} target="_blank" rel="noreferrer">
                   <ImageDiv>
                     <img
                       src={newGeneral[5].image}
@@ -188,7 +188,7 @@ function Div1({ general, technology }) {
             {popularMain.map((article) => {
               return (
                 <div>
-                  <a href={article.url}>
+                  <a href={article.url} target="_blank" rel="noreferrer">
                     <ImageDiv>
                       <img
                         src={article.image}

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
@@ -16,8 +17,10 @@ function Home() {
   const [entertainment, setEntertainment] = useState([]);
   const [health, setHealth] = useState([]);
   const [sports, setSports] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     axios
       .all([
         axios.get(
@@ -33,7 +36,7 @@ function Home() {
         //   `${api.base}access_key=${api.key}&categories=entertainment&languages=en&countries=us,gb,de,au,ca,fr&limit=100`
         // ),
         // axios.get(
-        //   `${api.base}access_key=${api.key}&categories=health&languages=en&countries=us,gb,de,au,ca,fr&limit=100`
+        //   `${api.base}access_key=${api.key}&categories=science&languages=en&countries=us,gb,de,au,ca,fr&limit=100`
         // ),
         // axios.get(
         //   `${api.base}access_key=${api.key}&categories=sports&languages=en&countries=us,gb,de,au,ca,fr&limit=100`
@@ -46,6 +49,7 @@ function Home() {
         // setEntertainment(res[3].data.data);
         // setHealth(res[4].data.data);
         // setSports(res[5].data.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err[0]);
@@ -55,15 +59,21 @@ function Home() {
   return (
     <div>
       <Header />
-      <Main
-        general={general}
-        technology={technology}
-        business={business}
-        entertainment={entertainment}
-        health={health}
-        sports={sports}
-      />
-      <Footer />
+      {!loading ? (
+        <>
+          <Main
+            general={general}
+            technology={technology}
+            business={business}
+            entertainment={entertainment}
+            health={health}
+            sports={sports}
+          />
+          <Footer />
+        </>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const StyledHeader = styled.header`
   display: flex;
   flex-direction: column;
+  position: sticky;
+  background-color: #fff;
+  z-index: 1;
+  top: 0;
 
   & > :first-child {
     width: 100%;
