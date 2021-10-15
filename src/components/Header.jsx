@@ -5,9 +5,9 @@ import { StyledHeader, StyledNav } from "../styles/Header";
 function Header() {
   return (
     <StyledHeader>
-      <div>
+      <Link to="/">
         <h1>NEWSFEED</h1>
-      </div>
+      </Link>
       <StyledNav>
         <Link to="">General</Link>
 

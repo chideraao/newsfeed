@@ -31,7 +31,7 @@ function VideosDiv() {
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
             <div>
               <p>TECHNOLOGY</p>
@@ -55,7 +55,7 @@ function VideosDiv() {
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
               <p>TECHNOLOGY</p>
               <h4>Why So Many CEOs Are Engineers</h4>
@@ -68,7 +68,7 @@ function VideosDiv() {
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
               <p>LIFESTYLE</p>
               <h4>A Day in the Life of a Harvard Student</h4>
@@ -81,7 +81,7 @@ function VideosDiv() {
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
               <p>TECHNOLOGY</p>
               <h4>Talking Tech and AI with Google CEO Sundar Pichai!</h4>
@@ -94,7 +94,7 @@ function VideosDiv() {
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
               <p>SPORTS</p>
               <h4>The fastest man on two hands</h4>
@@ -107,7 +107,7 @@ function VideosDiv() {
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
               <p>GAMING</p>
               <h4>30 Apex Legends Tips From Noob To Pro</h4>
@@ -120,7 +120,7 @@ function VideosDiv() {
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
               <p>BUSINESS</p>
               <h4>How 1.5 Million Aloe Vera Leaves Are Harvested A Week</h4>
@@ -133,7 +133,7 @@ function VideosDiv() {
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
               <p>HEALTH</p>
               <h4>What I Actually Eat In A Day</h4>
@@ -146,7 +146,7 @@ function VideosDiv() {
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
               <p>CULTURE</p>
               <h4>One of the Greatest Speeches Ever | Steve Jobs </h4>
@@ -159,7 +159,7 @@ function VideosDiv() {
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
               <p>TECHNOLOGY</p>
               <h4>How to build a tech startup - Paypal founder Max Levchin</h4>

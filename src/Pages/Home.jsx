@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Main from "../components/Main";
 
@@ -52,11 +53,7 @@ function Home() {
   }, []);
 
   return (
-    <div
-    // style={{
-    //   overflow: "hidden",
-    // }}
-    >
+    <div>
       <Header />
       <Main
         general={general}
@@ -66,6 +63,7 @@ function Home() {
         health={health}
         sports={sports}
       />
+      <Footer />
     </div>
   );
 }

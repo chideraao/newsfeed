@@ -224,7 +224,7 @@ export const AsideFooter = styled.div`
   }
 
   & > div svg {
-    margin-top: 0.2rem;
+    margin-top: 0.3rem;
     margin-left: 0.4rem;
   }
 

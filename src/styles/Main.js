@@ -4,7 +4,8 @@ import { Card } from "./Card";
 export const StyledMain = styled.main`
   background-color: #e4e6eb;
   padding-top: 0.5rem;
-  margin-bottom: 4rem;
+  padding-bottom: 1rem;
+  height: 100%;
 `;
 
 export const StyledDiv1 = styled.div`
@@ -232,5 +233,49 @@ export const AsideFooter = styled.div`
     text-transform: uppercase;
     font-family: "Syne Mono", monospace;
     font-weight: 500;
+  }
+`;
+
+export const StyledFullDiv = styled.div`
+  height: 20rem;
+
+  & ${Card} {
+    margin: 3px 0;
+    height: 100%;
+  }
+
+  & ${Card} a {
+    display: grid;
+    grid-template-columns: 65% 35%;
+  }
+
+  & ${Card} ${ImageDiv} {
+    height: 12rem;
+    max-height: 18rem;
+  }
+
+  & ${Card} a img {
+    width: 100%;
+    height: 17.5rem;
+    max-height: none;
+  }
+
+  & ${ArticleHeading} {
+    margin-top: 0;
+  }
+
+  & p {
+    font-family: "Share Tech Mono", monospace;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    margin: 0;
+    color: ${({ theme }) => theme.hoverColor};
+  }
+
+  & h3 {
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
   }
 `;
