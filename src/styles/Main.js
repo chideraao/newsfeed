@@ -12,6 +12,10 @@ export const StyledDiv1 = styled.div`
   display: grid;
   gap: 0.3rem;
   grid-template-columns: 68% 32%;
+
+  @media (max-width: 850px) {
+    display: block;
+  }
 `;
 
 export const ImageDiv = styled.div`
@@ -134,6 +138,57 @@ export const Div1Main = styled.div`
     margin: 0;
     font-size: 1.2rem;
   }
+
+  @media (max-width: 550px) {
+    & ${Card} {
+      margin: 0.4rem 0.1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    & ${Card} a {
+      display: flex;
+      align-items: center;
+    }
+
+    & > :first-child {
+      display: block;
+      margin-right: 0.5rem;
+    }
+
+    & > :first-child > :first-child {
+      width: 100%;
+    }
+
+    & > :first-child > :nth-child(2) {
+      width: 100%;
+    }
+
+    & > :nth-child(2) {
+      display: block;
+      margin-right: 0.2rem;
+    }
+
+    & > :nth-child(2) > :first-child,
+    & > :nth-child(2) > :nth-child(2) {
+      width: 100%;
+    }
+
+    & > :nth-child(2) > :nth-child(2) {
+      margin: 0.4rem 0rem;
+    }
+
+    & > :nth-child(2) a {
+      flex-direction: column !important;
+    }
+
+    & > :nth-child(2) > :nth-child(2) a ${ImageDiv} {
+      display: block;
+    }
+
+    & > :nth-child(3) a > :nth-child(2) {
+      margin-right: 0;
+    }
+  }
 `;
 
 export const StyledAside = styled.aside`
@@ -195,6 +250,27 @@ export const StyledAside = styled.aside`
     padding: 1rem 0;
     padding-bottom: 0.5rem;
   }
+
+  @media (max-width: 850px) {
+    & a {
+      grid-template-columns: 10% 90%;
+      gap: 1rem;
+    }
+
+    & div a :nth-child(2) {
+      margin-top: 0.5rem;
+    }
+  }
+  @media (max-width: 550px) {
+    & a ${ImageDiv} {
+      margin-top: 1rem;
+    }
+
+    & a {
+      grid-template-columns: 20% 80%;
+      gap: 1rem;
+    }
+  }
 `;
 
 export const AsideMain = styled.div`
@@ -210,20 +286,37 @@ export const AsideMain = styled.div`
   & > :last-child {
     border-bottom: none;
   }
+
+  @media (max-width: 850px) {
+    & > div {
+      height: 6rem;
+      padding-top: 0.2rem;
+    }
+  }
+
+  @media (max-width: 550px) {
+    & > div {
+      height: 7rem;
+      padding-top: 0.2rem;
+    }
+  }
 `;
 
 export const AsideFooter = styled.div`
   border-top: 1px solid ${({ theme }) => theme.borderColor};
-  display: flex;
 
-  & > div {
+  & a {
+    display: flex;
+  }
+
+  & a > div {
     background-color: #636161;
     width: 2rem;
     border-radius: 50%;
     margin: 0.6rem 1rem;
   }
 
-  & > div svg {
+  & a > div svg {
     margin-top: 0.2rem;
     margin-left: 0.4rem;
   }
@@ -233,6 +326,12 @@ export const AsideFooter = styled.div`
     text-transform: uppercase;
     font-family: "Syne Mono", monospace;
     font-weight: 500;
+  }
+
+  @media (max-width: 550px) {
+    & a > h4 {
+      margin-top: 0 !important;
+    }
   }
 `;
 
@@ -277,5 +376,25 @@ export const StyledFullDiv = styled.div`
     margin: 0;
     font-size: 1.7rem;
     margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 550px) {
+    height: auto;
+
+    & ${Card} a {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    & ${Card} ${ImageDiv} {
+      height: 100%;
+      max-height: 12rem;
+    }
+
+    & ${Card} a img {
+      width: 100%;
+      height: 11rem;
+      max-height: none;
+    }
   }
 `;

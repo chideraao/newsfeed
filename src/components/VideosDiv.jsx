@@ -2,6 +2,7 @@ import React from "react";
 import { Card } from "../styles/Card";
 import { StyledVideos, VideosMain } from "../styles/Videos";
 import { ReactComponent as More } from "../assets/east_black_24dp.svg";
+import { Link } from "react-router-dom";
 
 function VideosDiv() {
   return (
@@ -15,11 +16,13 @@ function VideosDiv() {
           }}
         >
           <h2>latest videos</h2>
-          <div style={{ display: "flex", marginRight: "1rem" }}>
-            <div>
-              <More />
-            </div>
-            <h4>More Videos</h4>
+          <div>
+            <Link to="/videos" style={{ display: "flex", marginRight: "1rem" }}>
+              <div>
+                <More />
+              </div>
+              <h4>More Videos</h4>
+            </Link>
           </div>
         </div>
         <VideosMain>

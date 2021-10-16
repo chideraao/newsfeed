@@ -11,6 +11,21 @@ export const ImageDiv = styled.div`
   }
 `;
 
+export const AsideMain = styled.div`
+  margin: 0 0.7rem;
+
+  & > div {
+    height: 7rem;
+    padding: 0.2rem;
+    padding-top: 0.5rem;
+    border-bottom: 1px solid ${({ theme }) => theme.borderColor};
+  }
+
+  & > :last-child {
+    border-bottom: none;
+  }
+`;
+
 export const ArticleHeading = styled.div`
   margin: 0.5rem;
   height: 5.3rem;
@@ -87,7 +102,7 @@ export const StyledAside = styled.aside`
     margin-bottom: 0.5rem;
   }
 
-  & a {
+  & ${Card} ${AsideMain} a {
     display: grid;
     grid-template-columns: 30% 70%;
   }
@@ -125,33 +140,21 @@ export const StyledAside = styled.aside`
   }
 `;
 
-export const AsideMain = styled.div`
-  margin: 0 0.7rem;
-
-  & > div {
-    height: 7rem;
-    padding: 0.2rem;
-    padding-top: 0.5rem;
-    border-bottom: 1px solid ${({ theme }) => theme.borderColor};
-  }
-
-  & > :last-child {
-    border-bottom: none;
-  }
-`;
-
 export const AsideFooter = styled.div`
   border-top: 1px solid ${({ theme }) => theme.borderColor};
-  display: flex;
 
-  & > div {
+  & a {
+    display: flex;
+  }
+
+  & a > div {
     background-color: #636161;
     width: 2rem;
     border-radius: 50%;
     margin: 0.6rem 1rem;
   }
 
-  & > div svg {
+  & a > div svg {
     margin-top: 0.3rem;
     margin-left: 0.4rem;
   }

@@ -64,4 +64,8 @@ export const StyledNav = styled.nav`
   & > :nth-child(6):hover {
     background-color: ${({ theme }) => theme.hoverColors[5]};
   }
+
+  @media (max-width: 550px) {
+    display: none;
+  }
 `;

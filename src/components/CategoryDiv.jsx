@@ -8,6 +8,7 @@ import {
   StyledAside,
 } from "../styles/FinalDiv";
 import { ReactComponent as More } from "../assets/east_black_24dp.svg";
+import { Link } from "react-router-dom";
 
 function shuffle(array) {
   let currentIndex = array.length,
@@ -43,8 +44,6 @@ function CategoryDiv({ data, heading, limit, margin, fill, fillTwo }) {
 
   popularMain.length = limit;
 
-  console.log(fill);
-
   return (
     <StyledAside>
       {fill ? (
@@ -68,9 +67,9 @@ function CategoryDiv({ data, heading, limit, margin, fill, fillTwo }) {
           <h2>{heading}</h2>
         </div>
         <AsideMain>
-          {popularMain.map((article) => {
+          {popularMain.map((article, idx) => {
             return (
-              <div>
+              <div key={idx}>
                 <a href={article.url} target="_blank" rel="noreferrer">
                   <ImageDiv>
                     <img
@@ -93,10 +92,12 @@ function CategoryDiv({ data, heading, limit, margin, fill, fillTwo }) {
           })}
         </AsideMain>
         <AsideFooter>
-          <div role="button">
-            <More />
-          </div>
-          <h4>More {heading}</h4>
+          <Link to={`/${heading}`}>
+            <div role="button">
+              <More />
+            </div>
+            <h4>More {heading}</h4>
+          </Link>
         </AsideFooter>
       </Card>
       {fillTwo ? (

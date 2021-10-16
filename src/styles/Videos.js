@@ -31,14 +31,18 @@ export const StyledVideos = styled.div`
     margin: 0 1rem;
   }
 
-  & ${Card} > :first-child > div > div {
+  & ${Card} > :first-child > div > a:hover {
+    color: ${({ theme }) => theme.hoverColor};
+  }
+
+  & ${Card} > :first-child > div > a > div {
     background-color: #636161;
     width: 2rem;
     border-radius: 50%;
     margin: 0.6rem 0.5rem;
   }
 
-  & ${Card} > :first-child > div > div svg {
+  & ${Card} > :first-child > div > a > div svg {
     margin-top: 0.25rem;
     margin-left: 0.3rem;
   }

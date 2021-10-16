@@ -10,6 +10,7 @@ import {
   StyledDiv2,
 } from "../styles/Div2";
 import { ReactComponent as More } from "../assets/east_black_24dp.svg";
+import { Link } from "react-router-dom";
 
 function shuffle(array) {
   let currentIndex = array.length,
@@ -61,9 +62,9 @@ function Div2({ general, technology }) {
             <h2>Most Recent</h2>
           </div>
           <AsideMain>
-            {popularMain.map((article) => {
+            {popularMain.map((article, idx) => {
               return (
-                <div>
+                <div key={idx}>
                   <a href={article.url} target="_blank" rel="noreferrer">
                     <ImageDiv>
                       <img
@@ -86,10 +87,12 @@ function Div2({ general, technology }) {
             })}
           </AsideMain>
           <AsideFooter>
-            <div role="button">
-              <More />
-            </div>
-            <h4>Read More</h4>
+            <Link to="/recent">
+              <div role="button">
+                <More />
+              </div>
+              <h4>Read More</h4>
+            </Link>
           </AsideFooter>
         </Card>
       </StyledAside>
