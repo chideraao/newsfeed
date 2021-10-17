@@ -53,6 +53,19 @@ export const StyledVideos = styled.div`
     font-family: "Syne Mono", monospace;
     font-weight: 500;
   }
+
+  @media (max-width: 850px) {
+    height: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  @media (max-width: 550px) {
+    & ${Card} > :first-child > div > a h4 {
+      display: none;
+    }
+  }
 `;
 
 export const VideosMain = styled.div`
@@ -120,5 +133,30 @@ export const VideosMain = styled.div`
   & :nth-child(2) h4 {
     font-size: 0.9rem;
     font-weight: 400;
+  }
+
+  @media (max-width: 850px) {
+    display: flex;
+    flex-direction: column;
+
+    & > :nth-child(2) {
+      height: auto;
+      border-right: none;
+      margin-top: 1rem;
+      margin-left: 0;
+      display: flex;
+      flex-direction: row;
+    }
+
+    & :nth-child(2) > div {
+      border-bottom: none;
+      margin-right: 0;
+      padding-left: 0.1rem;
+      padding-right: 0.7rem;
+      border-right: 1px solid ${({ theme }) => theme.borderColor};
+    }
+  }
+
+  @media (max-width: 550px) {
   }
 `;

@@ -32,17 +32,26 @@ function shuffle(array) {
   return array;
 }
 
-function Div2({ general, technology }) {
+function Div2({ general, technology, business, entertainment, sports }) {
+  var arrCollection = [...technology, ...business, ...entertainment];
   var newGeneral = [];
-  var popularContent = [...general, ...technology];
+  var popularContent = [
+    ...sports,
+    ...entertainment,
+    ...business,
+    ...general,
+    ...technology,
+  ];
   var popularMain = [];
+  shuffle(arrCollection);
 
-  technology.forEach((article) => {
+  arrCollection.forEach((article) => {
     if (article.image !== null) {
       newGeneral.push(article);
     }
   });
 
+  shuffle(newGeneral);
   shuffle(popularContent);
 
   popularContent.forEach((article) => {

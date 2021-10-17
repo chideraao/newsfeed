@@ -328,7 +328,7 @@ export const AsideFooter = styled.div`
     font-weight: 500;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 850px) {
     & a > h4 {
       margin-top: 0 !important;
     }

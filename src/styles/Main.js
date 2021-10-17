@@ -252,6 +252,8 @@ export const StyledAside = styled.aside`
   }
 
   @media (max-width: 850px) {
+    margin-top: 0.8rem;
+
     & a {
       grid-template-columns: 10% 90%;
       gap: 1rem;
@@ -328,7 +330,7 @@ export const AsideFooter = styled.div`
     font-weight: 500;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 850px) {
     & a > h4 {
       margin-top: 0 !important;
     }
@@ -378,7 +380,7 @@ export const StyledFullDiv = styled.div`
     margin-bottom: 0.5rem;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 850px) {
     height: auto;
 
     & ${Card} a {
@@ -388,6 +390,19 @@ export const StyledFullDiv = styled.div`
 
     & ${Card} ${ImageDiv} {
       height: 100%;
+      max-height: 13rem;
+    }
+
+    & ${Card} a img {
+      width: 100%;
+      height: 11.5rem;
+      max-height: none;
+    }
+  }
+
+  @media (max-width: 550px) {
+    & ${Card} ${ImageDiv} {
+      height: 100%;
       max-height: 12rem;
     }
 
@@ -395,6 +410,10 @@ export const StyledFullDiv = styled.div`
       width: 100%;
       height: 11rem;
       max-height: none;
+    }
+
+    & h3 {
+      font-size: 1.3rem;
     }
   }
 `;

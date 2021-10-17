@@ -24,6 +24,20 @@ export const AsideMain = styled.div`
   & > :last-child {
     border-bottom: none;
   }
+
+  @media (max-width: 850px) {
+    & > div {
+      height: 6rem;
+      padding-top: 0.2rem;
+    }
+  }
+
+  @media (max-width: 550px) {
+    & > div {
+      height: 7rem;
+      padding-top: 0.2rem;
+    }
+  }
 `;
 
 export const ArticleHeading = styled.div`
@@ -36,6 +50,10 @@ export const StyledFinalDiv = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
   margin-top: 0.8rem;
+
+  @media (max-width: 850px) {
+    display: block;
+  }
 `;
 
 export const StyledAside = styled.aside`
@@ -138,6 +156,32 @@ export const StyledAside = styled.aside`
     padding-bottom: 0.5rem;
     margin-left: 0;
   }
+
+  @media (max-width: 850px) {
+    & ${Card} ${AsideMain} a {
+      grid-template-columns: 10% 90%;
+      gap: 1rem;
+    }
+
+    & div a :nth-child(2) {
+      margin-top: 0.5rem;
+    }
+
+    & ${Card}.fill a {
+      flex-direction: row;
+    }
+  }
+
+  @media (max-width: 550px) {
+    & a ${ImageDiv} {
+      margin-top: 1rem;
+    }
+
+    & ${Card} ${AsideMain} a {
+      grid-template-columns: 20% 80%;
+      gap: 1rem;
+    }
+  }
 `;
 
 export const AsideFooter = styled.div`
@@ -164,5 +208,11 @@ export const AsideFooter = styled.div`
     text-transform: uppercase;
     font-family: "Syne Mono", monospace;
     font-weight: 500;
+  }
+
+  @media (max-width: 850px) {
+    & a > h4 {
+      margin-top: 0 !important;
+    }
   }
 `;

@@ -22,7 +22,7 @@ function Main({
 }) {
   var newTechnology = [];
 
-  technology.forEach((article) => {
+  entertainment.forEach((article) => {
     if (article.image !== null) {
       newTechnology.push(article);
     }
@@ -31,27 +31,48 @@ function Main({
   return (
     <StyledMain>
       <Container>
-        <Div1 general={general} technology={technology} />
+        <Div1
+          general={general}
+          technology={technology}
+          business={business}
+          sports={sports}
+          science={science}
+          entertainment={entertainment}
+        />
         <VideosDiv />
-        <Div2 general={general} technology={technology} />
+        <Div2
+          general={general}
+          technology={technology}
+          business={business}
+          sports={sports}
+          science={science}
+          entertainment={entertainment}
+        />
         <StyledFullDiv>
           <Card>
-            <a href={newTechnology[3].url} target="_blank" rel="noreferrer">
+            <a href={newTechnology[4].url} target="_blank" rel="noreferrer">
               <ImageDiv>
                 <img
-                  src={newTechnology[3].image}
-                  alt={`Thumbnail of ${newTechnology[3].title}`}
+                  src={newTechnology[4].image}
+                  alt={`Thumbnail of ${newTechnology[4].title}`}
                 />
               </ImageDiv>
               <ArticleHeading>
-                <p>{newTechnology[3].category}</p>
-                <h3>{newTechnology[3].title} </h3>
-                <p>{newTechnology[3].author || newTechnology[3].source} </p>
+                <p>{newTechnology[4].category}</p>
+                <h3>{newTechnology[2].title} </h3>
+                <p>{newTechnology[4].author || newTechnology[4].source} </p>
               </ArticleHeading>
             </a>
           </Card>
         </StyledFullDiv>
-        <FinalDiv general={general} technology={technology} />
+        <FinalDiv
+          general={general}
+          technology={technology}
+          business={business}
+          sports={sports}
+          science={science}
+          entertainment={entertainment}
+        />
       </Container>
     </StyledMain>
   );

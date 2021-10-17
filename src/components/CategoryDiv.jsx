@@ -54,7 +54,11 @@ function CategoryDiv({ data, heading, limit, margin, fill, fillTwo }) {
             </ImageDiv>
             <ArticleHeading>
               <p>{fill.category}</p>
-              <h3>{fill.title} </h3>
+              <h3>
+                {fill.title.length > 75
+                  ? `${fill.title.slice(0, 75)}...`
+                  : fill.title}
+              </h3>
               <p>{fill.author || fill.source} </p>
             </ArticleHeading>
           </a>
@@ -108,7 +112,11 @@ function CategoryDiv({ data, heading, limit, margin, fill, fillTwo }) {
             </ImageDiv>
             <ArticleHeading>
               <p>{fillTwo.category}</p>
-              <h3>{fillTwo.title} </h3>
+              <h3>
+                {fillTwo.title.length > 75
+                  ? `${fillTwo.title.slice(0, 75)}...`
+                  : fillTwo.title}{" "}
+              </h3>
               <p>{fillTwo.author || fillTwo.source} </p>
             </ArticleHeading>
           </a>
